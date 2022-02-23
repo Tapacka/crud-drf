@@ -36,7 +36,7 @@ Content-Type: application/json
 ###
 
 # поиск продуктов по названию и описанию
-GET {{baseUrl}}/products/?search=помидор
+GET {{baseUrl}}/products/?search=рын
 Content-Type: application/json
 
 ###
@@ -46,7 +46,7 @@ POST {{baseUrl}}/stocks/
 Content-Type: application/json
 
 {
-  "address": "казань",
+  "address": "спб",
   "positions": [
     {
       "product": 5,
@@ -64,14 +64,14 @@ Content-Type: application/json
 ###
 
 # обновляем записи на складе
-PATCH {{baseUrl}}/stocks/1/
+PATCH {{baseUrl}}/stocks/3/
 Content-Type: application/json
 
 {
-  "address": "мск",
+  "address": "gg",
   "positions": [
     {
-      "product": 2,
+      "product": 4,
       "quantity": 100,
       "price": 130.80
     },
@@ -86,5 +86,5 @@ Content-Type: application/json
 ###
 
 # поиск складов, где есть определенный продукт
-GET {{baseUrl}}/stocks/?products=2
+GET {{baseUrl}}/stocks/?products=5
 Content-Type: application/json
